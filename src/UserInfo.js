@@ -27,7 +27,6 @@ class UserInfo extends Component {
       name: "Gordan Freeman",
       profession: "Theoretical Physicist"
     };
-    this.luckyNumber =  Math.floor(Math.random() * 100) + 1;
   }
 
   // Class components must define a render function which returns
@@ -36,10 +35,9 @@ class UserInfo extends Component {
     return (
       <div style={{fontSize:24}}>
         {/* Task: Use JSX to return name and profession */}
-        <h2>User Profile</h2>
         <p>Name: {this.state.name}</p>
         <p>Profession: {this.state.profession}</p>
-        <p>Your lucky number is: {this.luckyNumber}</p>
+        <button onClick={this.props.handleClick}>Show Alert</button>
       </div>
     );
   }
